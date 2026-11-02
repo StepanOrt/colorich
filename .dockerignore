@@ -1,0 +1,11 @@
+.git
+.gradle
+build
+.kotlin
+.gemini
+.config
+.env
+*.log
+*.pdf
+*.png
+*.jpg

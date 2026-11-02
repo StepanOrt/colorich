@@ -1,0 +1,17 @@
+.gradle/
+build/
+.kotlin/
+.env
+*.log
+agy-bin
+
+# Prevent accidental staging of intermediate/generated media or credentials
+*.pdf
+*.png
+*.jpg
+*.jpeg
+oauth_creds.json
+
+# Antigravity & Gemini local dot directories
+.gemini/
+.config/

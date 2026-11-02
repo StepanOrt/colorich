@@ -1,0 +1,19 @@
+services:
+  colorich:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: colorich:latest
+    container_name: colorich
+    restart: unless-stopped
+    user: "1000:1000"
+    env_file:
+      - .env
+    environment:
+      - TZ=UTC
+      - HOME=/home/appuser
+      - CUPS_SERVER=/run/cups/cups.sock
+    volumes:
+      - ./.gemini:/home/appuser/.gemini:z
+      - ./.config/antigravity:/home/appuser/.config/antigravity:z
+      - /run/cups/cups.sock:/run/cups/cups.sock:z
